@@ -1,0 +1,27 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "askForPassword": true,
+            "driver": "PostgreSQL",
+            "database": "testDB",
+            "name": "postgres",
+            "username": "postgres"
+        },
+        {
+            "pgOptions": {
+                "ssl": true
+            },
+            "previewLimit": 50,
+            "server": "dpg-ciapcl15rnupq1q18kp0-a.oregon-postgres.render.com",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "vm_z6av_user",
+            "database": "vm_z6av",
+            "username": "vm_z6av_user",
+            "password": "xKMAdRjo22BMjqSt7r502rpxMl1u7gQG"
+        }
+    ]
+}
