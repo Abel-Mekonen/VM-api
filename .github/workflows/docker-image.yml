@@ -21,7 +21,7 @@ jobs:
       run: |
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag vm-api:1.0
-      
+      run: docker build . --file Dockerfile --tag vm-api
+
     - name: Docker push
       run: docker push ${{secrets.DOCKER_USER}}/vm-api
