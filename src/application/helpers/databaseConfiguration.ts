@@ -7,7 +7,7 @@ const DB_TYPE:
   | "oracle"
   | "sqlite" = "postgres";
 
-dotenv.config({ path: "src/.env", debug: true });
+dotenv.config();
 export const DB_CONFIG = {
   type: DB_TYPE,
   host: process.env.DB_HOST,

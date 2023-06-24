@@ -13,5 +13,5 @@ const main = async () => {
   }
 };
 
-config({ path: "src/.env", debug: true });
+config();
 main();
