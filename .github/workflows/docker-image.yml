@@ -26,7 +26,3 @@ jobs:
         context: .
         push: true
         tags: abelmek/vm-api:latest
-
-    - name: Deploy to Render
-      run: |
-        curl -X POST "${{ secrets.DEPLOY_WEB_HOOK }}"
