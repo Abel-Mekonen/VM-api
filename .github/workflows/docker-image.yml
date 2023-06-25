@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Build and Deploy
 
 on:
   push:
@@ -14,15 +14,21 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    
     - name: Docker login
       env:
         DOCKER_USER: ${{secrets.DOCKER_USER}}
         DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
       run: |
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+
     - name: Build and push Docker image
       uses: docker/build-push-action@v2
       with:
         context: .
         push: true
         tags: abelmek/vm-api:latest
+
+    - name: Deploy to Render
+      run: |
+        curl -X POST "${{ secrets.DEPLOY_WEB_HOOK }}"
