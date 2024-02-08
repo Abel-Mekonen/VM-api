@@ -1,2 +1,2 @@
 # HRMS
-A Django backend system for HR Management System
+A Django backend system for HR Management System.
